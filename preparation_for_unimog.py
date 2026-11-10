@@ -30,8 +30,8 @@ mustela_order = get_chromosomal_order("mustela_nivalis.faa", id_to_int)
 print(f"Генов в порядке хромосомы человека: {len(human_order)}")
 print(f"Генов в порядке хромосомы ласки: {len(mustela_order)}")
 
-# Проверяем, инвертирован ли порядок ласки
-# Если первый ген ласки соответствует последнему гену человека — разворачиваем
+#Проверяем, инвертирован ли порядок ласки
+#Если первый ген ласки соответствует последнему гену человека, то разворачиваем
 if mustela_order[0] > human_order[0] and mustela_order[-1] < human_order[-1]:
     print("Обнаружена инверсия порядка")
     mustela_order = mustela_order[::-1]
