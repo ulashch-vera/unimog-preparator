@@ -10,7 +10,7 @@ for i, (h_long, m_long) in enumerate(zip(human_ordered_long, mustela_ordered_lon
     id_to_int[h_long] = i
     id_to_int[m_long] = i
 
-print(f"Создано сопоставление для {len(id_to_int)} уникальных генов.")
+print(f"Создано сопоставление для {len(id_to_int)} генов")
 
 #Функция для извлечения порядка генов из FASTA файла
 def get_chromosomal_order(fasta_file, id_map):
@@ -33,7 +33,7 @@ print(f"Генов в порядке хромосомы ласки: {len(mustela
 #Проверяем, инвертирован ли порядок ласки
 #Если первый ген ласки соответствует последнему гену человека, то разворачиваем
 if mustela_order[0] > human_order[0] and mustela_order[-1] < human_order[-1]:
-    print("Обнаружена инверсия порядка")
+    print("Обнаружена инверсия")
     mustela_order = mustela_order[::-1]
 
 #Записываем в формат UniMoG
